@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  remote_user: vagrant  
+  sudo: yes
+  tasks:
+  - name: install git properties -- 安装 git
+    apt: name=git state=present
+  
