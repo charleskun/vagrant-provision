@@ -12,10 +12,10 @@ cat > "/etc/nginx/sites-enabled/v3-toa.conf" <<END
 server {
     server_name a.kai12.oo;
 
-    root /vagrant/k12_toa/School/school_demo;
+    root /vagrant/k12_toa/Management/school_demo;
 
     location /static {
-        alias /vagrant/k12_toa/School/app/static;
+        alias /vagrant/k12_toa/Management/app/static;
     }
 
     include locations.conf;
