@@ -5,8 +5,8 @@ apt-get -q -y autoremove
 apt-get -q -y autoclean
 apt-get -q -y clean
 # nl /etc/nginx/nginx.conf | sed 's/sendfile on/sendfile off/g'
-echo "end"
 
+#新增站点
 echo "Setting up Nginx mapping"
 cat > "/etc/nginx/sites-enabled/v3-toa.conf" <<END
 server {
@@ -21,4 +21,3 @@ server {
     include locations.conf;
 }
 END
-echo "v3-toa.conf created!"
